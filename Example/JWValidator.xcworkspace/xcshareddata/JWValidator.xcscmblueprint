@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C46C2B5ECD0815376F3F94CB43A34EF179A29C85",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3C9486485F5B328A9412F40063B4E113A0F7916A" : 0,
+    "C46C2B5ECD0815376F3F94CB43A34EF179A29C85" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EF7635DE-965B-4B9C-8BCB-FE201FB61CAC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3C9486485F5B328A9412F40063B4E113A0F7916A" : "",
+    "C46C2B5ECD0815376F3F94CB43A34EF179A29C85" : "JWValidator\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JWValidator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/JWValidator.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jen-l\/swift-text-validation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3C9486485F5B328A9412F40063B4E113A0F7916A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jen-l\/JWValidator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C46C2B5ECD0815376F3F94CB43A34EF179A29C85"
+    }
+  ]
+}

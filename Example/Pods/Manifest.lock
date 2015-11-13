@@ -1,0 +1,14 @@
+PODS:
+  - JWValidator (0.1.0)
+
+DEPENDENCIES:
+  - JWValidator (from `../`)
+
+EXTERNAL SOURCES:
+  JWValidator:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JWValidator: 088a35b991bfe60c69951dd17c018f6a4c75754d
+
+COCOAPODS: 0.39.0
