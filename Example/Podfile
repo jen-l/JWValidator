@@ -8,5 +8,7 @@ end
 target 'JWValidator_Tests', :exclusive => true do
   pod "JWValidator", :path => "../"
 
-  
+
 end
+
+link_with 'JWValidator_Example', 'JWValidator_Tests'

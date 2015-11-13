@@ -30,8 +30,8 @@ class Tests: XCTestCase {
     }
     
     func testEmailValidation() {
-        XCTAssertTrue(validationInstance.isValidEmail("arshemet@gmail.com", strict: true), "email validation returned false")
-        XCTAssertFalse(validationInstance.isValidEmail("arshemet@gmail.c", strict: true), "email validation returned true for strict regex")
+        XCTAssertTrue(validationInstance.isValidEmail("test@test.com", strict: true), "email validation returned false")
+        XCTAssertFalse(validationInstance.isValidEmail("test@test.c", strict: true), "email validation returned true for strict regex")
         XCTAssertFalse(validationInstance.isValidEmail("", strict: true), "empty email returned true")
     }
     
