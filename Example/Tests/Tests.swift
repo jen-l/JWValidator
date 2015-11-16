@@ -48,10 +48,10 @@ class Tests: XCTestCase {
     
     func testZip() {
         XCTAssertTrue(JWValidation.shared.validateText("56565", type: FieldType.Zipcode), "")
+        XCTAssertTrue(JWValidation.shared.validateText("56650-", type: FieldType.Zipcode), "")
         JWValidation.shared.setLongZipCode(true)
         XCTAssertFalse(JWValidation.shared.validateText("56565", type: FieldType.Zipcode), "")
         XCTAssertTrue(JWValidation.shared.validateText("565656565", type: FieldType.Zipcode), "")
-        XCTAssertTrue(JWValidation.shared.validateText("56650-", type: FieldType.Zipcode), "")
         XCTAssertTrue(JWValidation.shared.validateText("56565-6565", type: FieldType.Zipcode), "")
         XCTAssertFalse(JWValidation.shared.validateText("56-56", type: FieldType.Zipcode), "")
     }
