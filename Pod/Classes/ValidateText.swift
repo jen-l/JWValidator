@@ -1,5 +1,5 @@
 //
-//  JWValidateText.swift
+//  ValidateText.swift
 //  CustomTextfield
 //
 //  Created by Jenelle Walker on 1/6/15.
@@ -18,7 +18,7 @@ import UIKit
     case Email
 }
 
-public class JWValidation : NSObject  {
+public class Validation : NSObject  {
     
     private var passwordRegex: String =  "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
     private var nonEmailStrictRegex: String = "[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}"
@@ -27,9 +27,9 @@ public class JWValidation : NSObject  {
     private var longZip: Bool = false
     private var nameReq: Int = 3
     
-    public class var shared : JWValidation {
+    public class var shared : Validation {
         struct Static {
-            static let instance : JWValidation = JWValidation()
+            static let instance : Validation = Validation()
         }
         
         return Static.instance
@@ -142,7 +142,7 @@ public final class ValidatedTextField : UITextField, CanValidateInput {
     public func validate(type: FieldType, ended: ((ValidatedTextField, Bool) -> ())?, began: ((ValidatedTextField) -> ())?, changed: ((ValidatedTextField) -> ())?) {
         if ended != nil {
             NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidEndEditingNotification, object: self, queue: nil) { note in
-                let result: Bool = JWValidation.shared.validateText(self.text!, type: type)
+                let result: Bool = Validation.shared.validateText(self.text!, type: type)
                 ended!(self, result)
             }
         }
@@ -173,7 +173,7 @@ public final class ValidatedTextView : UITextView, CanValidateInput {
     public func validate(type: FieldType, ended: ((ValidatedTextView, Bool) -> ())?, began: ((ValidatedTextView) -> ())?, changed: ((ValidatedTextView) -> ())?) {
         if ended != nil {
             NSNotificationCenter.defaultCenter().addObserverForName(UITextViewTextDidEndEditingNotification, object: self, queue: nil) { note in
-                let result: Bool = JWValidation.shared.validateText(self.text!, type: type)
+                let result: Bool = Validation.shared.validateText(self.text!, type: type)
                 ended!(self, result)
             }
         }
