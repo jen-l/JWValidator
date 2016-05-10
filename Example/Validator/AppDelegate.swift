@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  JWValidator
+//  Validator
 //
-//  Created by Jenelle Walker on 11/13/2015.
+//  Created by Jenelle Walker on 1/9/15.
 //  Copyright (c) 2015 Jenelle Walker. All rights reserved.
 //
 

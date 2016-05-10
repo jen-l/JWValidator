@@ -1,13 +1,12 @@
 //
 //  ViewController.swift
-//  JWValidator
+//  Validator
 //
-//  Created by Jenelle Walker on 11/13/2015.
+//  Created by Jenelle Walker on 1/9/15.
 //  Copyright (c) 2015 Jenelle Walker. All rights reserved.
 //
 
 import UIKit
-import JWValidator
 
 class ViewController: UIViewController {
     @IBOutlet weak var textfield: ValidatedTextField!
@@ -17,7 +16,7 @@ class ViewController: UIViewController {
     
     var limit = 20
     
-    let validationInstance = JWValidation.shared;
+    let validationInstance = Validation.shared;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,15 +73,13 @@ class ViewController: UIViewController {
         
         self.charLimit.text = "\(self.limit)"
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(validationInstance)
     }
 }
-
-
