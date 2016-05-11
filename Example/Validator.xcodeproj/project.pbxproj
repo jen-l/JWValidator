@@ -13,8 +13,6 @@
 		D2FFB88D1A601FF8004B00E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FFB88B1A601FF8004B00E9 /* Main.storyboard */; };
 		D2FFB88F1A601FF8004B00E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FFB88E1A601FF8004B00E9 /* Images.xcassets */; };
 		D2FFB8921A601FF8004B00E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FFB8901A601FF8004B00E9 /* LaunchScreen.xib */; };
-		D2FFB8A81A602011004B00E9 /* ValidateText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FFB8A71A602011004B00E9 /* ValidateText.swift */; };
-		F2910F441CE2844E0026DF19 /* ValidateText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FFB8A71A602011004B00E9 /* ValidateText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +36,6 @@
 		D2FFB8971A601FF8004B00E9 /* Validator.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Validator.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FFB89C1A601FF8004B00E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FFB89D1A601FF8004B00E9 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
-		D2FFB8A71A602011004B00E9 /* ValidateText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +79,6 @@
 			children = (
 				D2FFB8871A601FF8004B00E9 /* AppDelegate.swift */,
 				D2FFB8891A601FF8004B00E9 /* ViewController.swift */,
-				D2FFB8A71A602011004B00E9 /* ValidateText.swift */,
 				D2FFB88B1A601FF8004B00E9 /* Main.storyboard */,
 				D2FFB88E1A601FF8004B00E9 /* Images.xcassets */,
 				D2FFB8901A601FF8004B00E9 /* LaunchScreen.xib */,
@@ -218,7 +214,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FFB8A81A602011004B00E9 /* ValidateText.swift in Sources */,
 				D2FFB88A1A601FF8004B00E9 /* ViewController.swift in Sources */,
 				D2FFB8881A601FF8004B00E9 /* AppDelegate.swift in Sources */,
 			);
@@ -228,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2910F441CE2844E0026DF19 /* ValidateText.swift in Sources */,
 				D2EF5EA21B385EC4004073CC /* ValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
