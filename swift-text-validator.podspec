@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'swift-text-validator/Classes/**/*'
   s.resource_bundles = {
-    'Validator' => ['Pod/Assets/*.png']
+    'Validator' => ['swift-text-validator/Assets/*.png']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

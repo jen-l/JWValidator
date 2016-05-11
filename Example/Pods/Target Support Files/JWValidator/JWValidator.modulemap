@@ -1,6 +1,0 @@
-framework module JWValidator {
-  umbrella header "JWValidator-umbrella.h"
-
-  export *
-  module * { export * }
-}
