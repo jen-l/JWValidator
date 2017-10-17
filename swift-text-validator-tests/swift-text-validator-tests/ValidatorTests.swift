@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import swift_text_validator
 
 class ValidatorTests: XCTestCase {
     let validationInstance = Validation.shared;

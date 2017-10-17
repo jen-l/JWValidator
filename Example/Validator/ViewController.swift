@@ -1,3 +1,4 @@
+
 //
 //  ViewController.swift
 //  Validator
@@ -7,6 +8,7 @@
 //
 
 import UIKit
+import swift_text_validator
 
 class ViewController: UIViewController {
     @IBOutlet weak var textfield: ValidatedTextField!
@@ -25,51 +27,55 @@ class ViewController: UIViewController {
         let endedEditing = { (input: AnyObject, valid: Bool) -> Void in
             if !valid {
                 if let textfield = input as? UITextField {
-                    textfield.textColor = UIColor.redColor()
+                    textfield.textColor = UIColor.red
                 } else if let textview = input as? UITextView {
-                    textview.textColor = UIColor.redColor()
+                    textview.textColor = UIColor.red
                 }
             }
         }
         
         let beganEditing = { (input: AnyObject) -> Void in
             if let textfield = input as? UITextField {
-                textfield.textColor = UIColor.blackColor()
+                textfield.textColor = UIColor.black
             } else if let textview = input as? UITextView {
-                textview.textColor = UIColor.blackColor()
+                textview.textColor = UIColor.black
             }
         }
         
         let changed = { (input: AnyObject) -> Void in
             if let textfield = input as? UITextField {
                 if (textfield.text!.utf16.count > self.limit) {
-                    self.charLimit.textColor = UIColor.redColor()
+                    self.charLimit.textColor = UIColor.red
                 } else {
-                    self.charLimit.textColor = UIColor.grayColor()
+                    self.charLimit.textColor = UIColor.gray
                 }
                 let remaining = self.limit - textfield.text!.utf16.count
                 self.charLimit.text = "\(remaining)"
             } else if let textview = input as? UITextView {
                 if (textview.text.utf16.count > self.limit) {
-                    self.charLimit.textColor = UIColor.redColor()
+                    self.charLimit.textColor = UIColor.red
                 } else {
-                    self.charLimit.textColor = UIColor.grayColor()
+                    self.charLimit.textColor = UIColor.gray
                 }
                 let remaining = self.limit - textview.text.utf16.count
                 self.charLimit.text = "\(remaining)"
             }
         }
         
-        let newTextfield: ValidatedTextField = ValidatedTextField(frame: CGRectMake(20, 28, 100, 30))
-        newTextfield.borderStyle = UITextBorderStyle.RoundedRect
+        let newTextfield: ValidatedTextField = ValidatedTextField(frame: CGRect(x:20, y:55, width:100, height:30))
+        newTextfield.borderStyle = UITextBorderStyle.roundedRect
         
-        newTextfield.validate(FieldType.Email, ended: endedEditing, began: beganEditing, changed: nil)
+        newTextfield.validate(FieldType.email, ended: endedEditing, began: beganEditing, changed: nil)
+        
+        let newLabel: UILabel = UILabel(frame: CGRect(x: 20, y: 28, width: 300, height: 20))
+        newLabel.text = "Programmatic Email Textfield"
         
         self.view.addSubview(newTextfield)
+        self.view.addSubview(newLabel)
         
-        self.textfield.validate(FieldType.Email, ended: endedEditing, began: beganEditing, changed:nil);
-        self.anotherTextfield.validate(FieldType.PhoneNumber, ended: endedEditing, began: beganEditing, changed: nil)
-        self.textview.validate(FieldType.None, ended: nil, began: nil, changed: changed)
+        self.textfield.validate(FieldType.email, ended: endedEditing, began: beganEditing, changed:nil);
+        self.anotherTextfield.validate(FieldType.phoneNumber, ended: endedEditing, began: beganEditing, changed: nil)
+        self.textview.validate(FieldType.none, ended: nil, began: nil, changed: changed)
         
         self.charLimit.text = "\(self.limit)"
     }
@@ -80,6 +86,6 @@ class ViewController: UIViewController {
     }
 
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(validationInstance)
+        NotificationCenter.default.removeObserver(validationInstance)
     }
 }
